@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload CSV </title>
+</head>
+<body>
+<h1>Upload a File</h1>
+
+<form action="upload_file.php" method="post" enctype="multipart/form-data">
+<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+<label for="file">Upload CSV File:</label>
+<input type="file" name="file" id="file" accept=".csv" required/>
+<input type="submit" id="submit" name="submit" value="Upload"/>
+</form>
+
+</body>
+</html>
