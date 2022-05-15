@@ -30,4 +30,13 @@ if (isset($_POST['submit']))
             // Skip the first line
             fgetcsv($csvFile);
  
-            
+            // Parse data from CSV file line by line
+             // Parse data from CSV file line by line
+            while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
+            {
+                // Get row data
+                $name = $getData[0];
+                $email = $getData[1];
+                $phone = $getData[2];
+                 
+               
