@@ -47,4 +47,10 @@ if (isset($_POST['submit']))
                 if ($check->num_rows > 0)
                 {
                     mysqli_query($con, "UPDATE members SET name = '" . $name . "', phone = '" . $phone . "', WHERE email = '" . $email . "'");
-               
+                }
+                else
+                {
+                     mysqli_query($con, "INSERT INTO members (name, email, phone) VALUES ('" . $name . "', '" . $email . "', '" . $phone . "')");
+ 
+                }
+            
