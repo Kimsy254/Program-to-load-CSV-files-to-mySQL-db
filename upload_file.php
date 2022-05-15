@@ -39,4 +39,12 @@ if (isset($_POST['submit']))
                 $email = $getData[1];
                 $phone = $getData[2];
                  
+                // If user already exists in the database with the same email
+                $query = "SELECT id FROM members WHERE email = '" . $getData[1] . "'";
+ 
+                $check = mysqli_query($con, $query);
+ 
+                if ($check->num_rows > 0)
+                {
+                    mysqli_query($con, "UPDATE members SET name = '" . $name . "', phone = '" . $phone . "', WHERE email = '" . $email . "'");
                
