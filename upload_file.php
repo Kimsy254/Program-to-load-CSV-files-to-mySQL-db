@@ -53,4 +53,9 @@ if (isset($_POST['submit']))
                      mysqli_query($con, "INSERT INTO members (name, email, phone) VALUES ('" . $name . "', '" . $email . "', '" . $phone . "')");
  
                 }
+            }
+ 
+            // Close opened CSV file
+            fclose($csvFile);
+ 
             
