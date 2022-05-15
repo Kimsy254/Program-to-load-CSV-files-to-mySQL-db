@@ -1,4 +1,4 @@
-# Program-to-load-CSV-files-to-mySQL-db
+# Program-to-load-Excel/CSV-files-to-mySQL-db
 
 ## User Upload a CSV file to the program
 
