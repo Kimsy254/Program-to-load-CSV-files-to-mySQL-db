@@ -20,3 +20,8 @@ if (isset($_POST['submit']))
         'text/plain'
     );
  
+    // Validate whether selected file is a CSV file
+    if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $fileMimes))
+    {
+ 
+           
