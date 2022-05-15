@@ -58,4 +58,6 @@ if (isset($_POST['submit']))
             // Close opened CSV file
             fclose($csvFile);
  
-            
+            header("Location: home.html");
+         
+    
