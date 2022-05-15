@@ -24,4 +24,10 @@ if (isset($_POST['submit']))
     if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $fileMimes))
     {
  
-           
+            // Open uploaded CSV file with read-only mode
+            $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
+ 
+            // Skip the first line
+            fgetcsv($csvFile);
+ 
+            
